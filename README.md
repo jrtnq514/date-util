@@ -24,7 +24,7 @@ Using default format
 ```
 Using custom format
 ```html
-<date-util format="<format>"></date-util>
+<date-util format=" <format> "></date-util>
 ```
 ####In javascript
 Using default format
