@@ -8,7 +8,7 @@ Date formatter element/utility for your Polymer project.
 var date = new DateUtil();
 ```
 ```js
-var date = new DateUtil(<format>);
+var date = new DateUtil( <format> );
 ```
 **format**
 
@@ -35,7 +35,7 @@ date.now();
 Using custom format for single instance
 ```js
 var date = new DateUtil();
-date.now(<format>);
+date.now( <format> );
 ```
 
 ##Format 
