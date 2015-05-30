@@ -6,6 +6,7 @@
     "Josh Taylor"
   ],
   "description": "Date formatter element for Polymer",
+  "main": "date-util.html",
   "keywords": [
     "web-components",
     "polymer",
