@@ -1,6 +1,11 @@
 # date-util
 Date formatter element/utility for your Polymer project.
 
+##Install
+With bower
+
+`bower install date-util --save`
+
 ##Constructor
 *Note: You may change the default format ("MM/dd/yyyy H:mm:ss.zzz") in the constructor for every usage of that `DateUtil()` instance .*
 
