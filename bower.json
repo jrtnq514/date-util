@@ -11,6 +11,7 @@
     "web-components",
     "polymer",
     "date",
+    "time",
     "format"
   ],
   "license": "MIT",
