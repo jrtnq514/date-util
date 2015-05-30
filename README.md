@@ -2,7 +2,7 @@
 Date formatter element for Polymer
 
 ##Usage
-You may use the date formatter element as an html tag or in javascript. For either if no format is provided the default format ("MM/dd/yyyy H:mm:ss.zzz") will be used.
+*Note: You may use the date formatter element as an html tag or in javascript. For either if no format is provided the default format ("MM/dd/yyyy H:mm:ss.zzz") will be used.*
 
 ####In html
 Using default format
