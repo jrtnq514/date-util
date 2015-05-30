@@ -17,7 +17,8 @@ The format in which the the date string will be returned. Ex. `"MM/dd/yyyy H:mm:
 ##Usage
 *Note: You may use the date formatter element as an html tag or in javascript. For either, if no format is provided the default format ("MM/dd/yyyy H:mm:ss.zzz") will be used.*
 
-####In html
+####For use in html
+*Note: This will display the formatted date in your html 
 Using default format
 ```html
 <date-util></date-util>
@@ -26,7 +27,7 @@ Using custom format
 ```html
 <date-util format=" <format> "></date-util>
 ```
-####In javascript
+####For use in javascript
 Using default format
 ```js
 var date = new DateUtil();
