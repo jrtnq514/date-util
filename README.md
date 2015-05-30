@@ -2,7 +2,7 @@
 Date formatter element/utility for your Polymer project.
 
 ##Constructor
-*Note: You may change the default format in the constructor for every usage of that `DateUtil()` instance .*
+*Note: You may change the default format ("MM/dd/yyyy H:mm:ss.zzz") in the constructor for every usage of that `DateUtil()` instance .*
 
 ```js
 var date = new DateUtil();
