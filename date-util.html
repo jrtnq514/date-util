@@ -27,7 +27,7 @@
 	</style>
 
 	<template>
-		<span>{{now(format)}}</span>
+		<span>{{dateDisplayed}}</span>
 	</template>
 
 </dom-module>
@@ -95,7 +95,7 @@
     function getDayOfWeek(dayNumber) {
         switch(dayNumber) {
             case 0:
-                return "Sunday"
+                return "Sunday";
             case 1:
                 return "Monday";
             case 2:
@@ -111,8 +111,8 @@
         }
     }
 
-    function buildDate(format) {
-        var date = new Date();
+    function buildDate(format, date) {
+    
         format = format.replace(/MM/g, ("0" + (date.getMonth()+1)).slice(-2));
         format = format.replace(/dd/g, ("0" + date.getDate()).slice(-2));
         format = format.replace(/yyyy/g, date.getFullYear());
@@ -123,9 +123,9 @@
         format = format.replace(/zzz/g, ("0" + "00" + date.getMilliseconds()).slice(-3));
         
         format = format.replace(/Month/g, getMonthName(date.getMonth()+1));
-        format = format.replace(/Mon/g, getAbbrvMonthName(date.getMonth()+1))
+        format = format.replace(/Mon/g, getAbbrvMonthName(date.getMonth()+1));
         format = format.replace(/Day/g, getDayOfWeek(date.getDay()));
-      
+      console.log(format);
         return format;
     }
 
@@ -136,23 +136,53 @@
       format: {
         type: String,
         value: "MM/dd/yy H:mm:ss.zzz"
+      },
+      
+      date : {
+      
+        type : Date,
+        value: new Date()
+      
+      },
+      
+      dateDisplayed : {
+      
+        type : String,
+        computed : 'computeDateDisplayed(format, date)'
       }
+      
     },
     
-    factoryImpl: function(format) {
+    factoryImpl: function(format, date) {
       if(format != undefined && format != "") {
         this.format = newFormat;
+      }
+      
+      if(date != undefined || date != null) {
+        this.date=date;
       }
     },
     
     now: function(format) {
+     
+        return this.get(format,new Date());
+    },
+    
+    get: function(format, date) {
+    
       if(format == undefined || format == "" || format == null) {
-        return buildDate(this.format);
+        return buildDate(this.format, date);
+      }else{
+      return buildDate(format, date);
       }
-      
-      return buildDate(format);
+    
+    },
+    
+    computeDateDisplayed: function(format, date){
+         return this.get(format,date);
+        
+    
     }
-
     
   });
 })();
