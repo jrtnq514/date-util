@@ -33,7 +33,7 @@
 </dom-module>
 
 <script>
-(function() {
+(function(scope) {
     function getMonthName(monthNumber) {
         switch(monthNumber) {
             case 1:
@@ -129,7 +129,7 @@
         return format;
     }
 
-  DateUtil = Polymer({
+  scope.DateUtil = Polymer({
     is: "date-util",
     
     properties: {
@@ -185,5 +185,5 @@
     }
     
   });
-})();
+})(window);
 </script>

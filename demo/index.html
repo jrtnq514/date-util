@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>date-util demo</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+        <link rel="import" href="../date-util.html">
+
+        <style is="custom-style" include="demo-pages-shared-styles">
+            date-util {
+                display: block;
+            }
+        </style>
+    </head>
+    <body unresolved>
+        <div class="vertical-section-container centered">
+            <h3>Basic display of a date</h3>
+            <demo-snippet>
+                <template>
+                    <date-util></date-util>
+                </template>
+            </demo-snippet>
+            <h3>Custom format</h3>
+            <demo-snippet>
+                <template>
+                    
+                    <date-util format="MM/dd/yyyy"></date-util>
+                    <date-util format="H:mm:ss.zzz"></date-util>
+                    <date-util format="Day dd of Month yyyy"></date-util>
+                </template>
+            </demo-snippet>
+        </div>
+    </body>
+</html>
